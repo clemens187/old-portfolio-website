@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="de-DE">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="videos.css">
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="icon" type="image/x-icon" href="assets/img/ck_logo.webp">
+
+    <link rel="stylesheet" href="/assets/fancybox/css/jquery.fancybox.min.css" />
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+    <div class="header">
+        <p>work.ckastner.com</p>
+        <div class="header_navigation">
+            <div class="btn">
+                <a href="index.html">
+                    <p>Home</p>
+                </a>
+            </div>
+            <div class="btn">
+                <a href="galerie.html">
+                    <p>Fotos</p>
+                </a>
+            </div>
+            <div class="btn">
+                <a href="#">
+                    <p>Videos</p>
+                </a>
+            </div>
+            <div class="btn">
+                <a href="uebermich.html">
+                    <p>Profil</p>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="grid">
+        <div class="item">
+            <a href="/assets/vid/vid2.mp4" data-fancybox>
+                <video class="h_video" muted loop playinline preload="metadata" onmouseover="this.play()" onmouseout="this.pause()">
+                    <source src="/assets/vid/vid2.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                Your browser does not support the video tag.
+            </a>
+        </div>
+
+        <div class="item">
+            <a href="/assets/vid/vid1_c.mp4" data-fancybox>
+                <video class="h_video" muted loop playinline preload="auto" onmouseover="this.play()" onmouseout="this.pause()">
+                    <source src="/assets/vid/vid1_c.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </a>
+        </div>
+
+        <div class="item">
+            <a href="/assets/vid/vid3.mp4" data-fancybox>
+                <video class="h_video" muted loop playinline preload="auto" onmouseover="this.play()" onmouseout="this.pause()">
+                    <source src="/assets/vid/vid3.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </a>
+        </div>
+        <div class="item">
+            <a href="/assets/vid/quality_audi.mp4" data-fancybox>
+                <video class="h_video" muted loop playinline preload="auto" onmouseover="this.play()" onmouseout="this.pause()">
+                    <source src="/assets/vid/quality_audi.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </a>
+        </div>
+        <div class="item">
+            <a href="/assets/vid/fpv.mp4" data-fancybox>
+                <video class="h_video" muted loop playinline preload="auto" onmouseover="this.play()" onmouseout="this.pause()">
+                    <source src="/assets/vid/fpv.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </a>
+        </div>
+        <div class="item">
+            <a href="/assets/vid/night.mp4" data-fancybox>
+                <video class="h_video" muted loop playinline preload="auto" onmouseover="this.play()" onmouseout="this.pause()">
+                    <source src="/assets/vid/night.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </a>
+        </div>
+        <div class="item">
+            <a href="/assets/vid/dolejschi_audi.mp4" data-fancybox>
+                <video class="h_video" muted loop playinline preload="auto" onmouseover="this.play()" onmouseout="this.pause()">
+                    <source src="/assets/vid/dolejschi_audi.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </a>
+        </div>
+        <div class="item">
+            <a href="/assets/vid/gr86.mp4" data-fancybox>
+                <video class="h_video" muted loop playinline preload="auto" onmouseover="this.play()" onmouseout="this.pause()">
+                    <source src="/assets/vid/gr86.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </a>
+        </div>
+        <div class="item">
+            <a href="/assets/vid/dolejschi_audi2.mp4" data-fancybox>
+                <video class="h_video" muted loop playinline preload="auto" onmouseover="this.play()" onmouseout="this.pause()">
+                    <source src="/assets/vid/dolejschi_audi2.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </a>
+        </div>
+        <div class="item">
+            <a href="/assets/vid/slow_audi.mp4" data-fancybox>
+                <video class="h_video" muted loop playinline preload="auto" onmouseover="this.play()" onmouseout="this.pause()">
+                    <source src="/assets/vid/slow_audi.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </a>
+        </div>
+    </div>
+
+
+    <div class="footer">
+        <p>© 2024 Clemens Kastner - ckastner.com</p>
+        <p>Alle Inhalte dieser Webseite, insbesondere Texte, Videos, Fotografien und Grafiken, sind urheberrechtlich geschützt. Das Urheberrecht liegt, soweit nicht ausdrücklich anders gekennzeichnet, bei Clemens Kastner. <a href="https://www.ckastner.com/index.html#kontakt">Bitte fragen</a> Sie mich, falls Sie Inhalte dieser Webseite verwenden möchten.</p>    
+    </div>
+    
+    
+    <script>
+    // Function to detect iOS devices
+    function isIOS() {
+        return /iPhone|iPad|iPod/i.test(navigator.userAgent || navigator.vendor || (window.opera && opera.toString() === `[object Opera]`));
+    }
+
+    // Function to add poster attribute only to videos on iOS devices
+    function addPosterToVideos() {
+        if (isIOS()) {
+            // Mapping video filenames to poster images
+            const videoPosters = {
+                'vid2.mp4': '/assets/vid/vid2.mp4',
+                'vid1_c.mp4': '/assets/vid/vid1_c.mp4',
+                'vid3.mp4': '/assets/vid/vid3.mp4',
+                'quality_audi.mp4': '/assets/vid/quality_audi.mp4',
+                'fpv.mp4': '/assets/vid/fpv.mp4',
+                'night.mp4': '/assets/vid/night.mp4',
+                'dolejschi_audi.mp4': '/assets/vid/dolejschi_audi.mp4',
+                'gr86.mp4': '/assets/vid/gr86.mp4',
+                'dolejschi_audi2.mp4': '/assets/vid/dolejschi_audi2.mp4',
+                'slow_audi.mp4': '/assets/vid/slow_audi.mp4'
+            };
+
+            // Select all video elements
+            const videos = document.querySelectorAll('video');
+
+            // Loop through the video elements and apply the corresponding poster for iOS
+            videos.forEach((video) => {
+                const sourceElement = video.querySelector('source');
+                if (sourceElement) {
+                    const videoSrc = sourceElement.getAttribute('src').split('/').pop(); // Get the video file name
+                    if (videoPosters[videoSrc]) {
+                        video.setAttribute('poster', videoPosters[videoSrc]); // Set the corresponding poster image for iOS
+                    }
+                }
+            });
+        }
+    }
+
+    // Call the function once the DOM is fully loaded, but only affect iOS
+    document.addEventListener('DOMContentLoaded', addPosterToVideos);
+    </script>
+
+
+
+
+    <script src="/assets/fancybox/js/jquery.min.js"></script>
+    <script src="/assets/fancybox/js/jquery.fancybox.min.js"></script>
+
+</body>

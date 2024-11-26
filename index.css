@@ -1,0 +1,162 @@
+.grid {
+    margin: auto;
+    margin-top: 100px;
+    max-width: 1210px;
+    width: fit-content;
+    height: 1520px;
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(4, 280px);
+    grid-template-rows: repeat(5, 280px);
+    grid-template-areas:
+      "welcome welcome image1 video1"
+      "image2 video2 aboutme video1"
+      "imagegallery video2 bigimage2 bigimage2"
+      "bigimage1 bigimage1 video3 image3"
+      "image4 videogallery video3 image5 ";
+}
+.item {
+    border-radius: 30px;
+    background-color: white;
+    padding: 20px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}  
+
+
+/*IMAGE WIDGETS*/
+.item:has(.v_smallimage),
+.item:has(.h_smallimage) {
+    display: flex;
+    padding: 0px;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+.v_smallimage{
+    width: 100%;
+}
+.h_smallimage{
+    height: 100%;
+}
+/**/
+
+/*VIDEO WIDGETS*/
+.item:has(video) {
+    display: flex;
+    padding: 0px;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+video{
+    width: 120%;
+}
+/**/
+
+/*BUTTON*/
+.item:has(.btn) {
+    position: relative;
+}
+.item > a > .btn{
+    width: 150px;
+    height: 60px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 7px 29px 0px;   
+    border: 3px solid rgba(21, 21, 21, 1);
+    border-radius: 15px;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.item > a > .btn > p{
+    color: rgb(21, 21, 21);
+}
+.item:has(.btn) > a > .btn:hover {
+    transition: 0.2s;
+    width: 160px;
+    height: 70px;
+    bottom: 15px;
+    right: 15px;
+    border-radius: 18px;
+    border: 4px solid rgba(21, 21, 21, 1);
+    background-color: rgb(21, 21, 21);
+    cursor: pointer;
+}
+.item:has(.btn) > a > .btn:hover > p{
+    transition: 0.3s;
+    color: white;
+}
+
+/**/
+
+
+.grid .item:nth-child(1) { grid-area: welcome; }
+.grid .item:nth-child(2) { grid-area: image1; }
+.grid .item:nth-child(3) { grid-area: video1; }
+.grid .item:nth-child(4) { grid-area: image2; }
+.grid .item:nth-child(5) { grid-area: video2; }
+.grid .item:nth-child(6) { grid-area: aboutme; }
+.grid .item:nth-child(7) { grid-area: imagegallery; }
+.grid .item:nth-child(8) { grid-area: bigimage2; }
+.grid .item:nth-child(9) { grid-area: bigimage1; }
+.grid .item:nth-child(10) { grid-area: video3; }
+.grid .item:nth-child(11) { grid-area: image3; }
+.grid .item:nth-child(12) { grid-area: image4; }
+.grid .item:nth-child(13) { grid-area: videogallery; }
+.grid .item:nth-child(14) { grid-area: image5; }
+
+@media screen and (max-width: 1270px) {
+    .grid {
+        margin: auto;
+        margin-top: 100px;
+        max-width: 90%;
+        height: calc(7 * 28vw);
+        display: grid;
+        gap: 20px;
+        grid-template-columns: repeat(3, 28vw);
+        grid-template-rows: repeat(7, 28vw);
+        grid-template-areas:
+          "welcome welcome image1"
+          "image2 video1 aboutme"
+          "imagegallery video1 image3"
+          "bigimage2 bigimage2 video2"
+          "video3 image4 video2"
+          "video3 image5 videogallery"
+          "bigimage1 bigimage1 empty";
+    }
+  }
+  @media screen and (max-width: 950px) {
+    .grid {
+        margin: auto;
+        margin-top: 100px;
+        height: calc(10 * 40vw);
+        display: grid;
+        gap: 15px;
+        grid-template-columns: repeat(2, 40vw);
+        grid-template-rows: repeat(10, 40vw);
+        grid-template-areas:
+          "welcome welcome"
+          "image1 video1"
+          "imagegallery video1"
+          "image2 image5"
+          "video2 image3"
+          "video2 videogallery"
+          "bigimage2 bigimage2"
+          "image4 video3"
+          "aboutme video3"
+          "bigimage1 bigimage1";
+    }
+  }
+  @media screen and (max-width: 700px) {
+    .item > a > .btn{
+        width: 25vw;
+        height: 10vw;
+    }
+    .spacer{
+        height: 3px;
+    }
+  }

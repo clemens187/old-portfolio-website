@@ -1,0 +1,103 @@
+/* Grid layout for the gallery */
+.grid {
+    margin: auto;
+    margin-top: 100px;
+    max-width: 1210px;
+    width: fit-content;
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(4, 1fr); /* 4 columns */
+    grid-template-rows: repeat(3, 1fr); /* Auto height based on content */
+    grid-auto-flow: dense; /* Fill the grid with available items */
+}
+
+/* Style each grid item */
+.item {
+    width: 280px;
+    height: 460px;
+    border-radius: 20px;
+    background-color: transparent;
+    box-shadow: rgba(100, 100, 111, 0.4) 0px 7px 29px 0px;
+    overflow: hidden;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.video-item > a{
+    width: 280px !important;
+    height: 280px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+/* Flexbox to center video inside the item */
+.video-item:has(.video),
+.video-item:has(.v_video),
+.video-item:has(.h_video) {
+    display: flex;
+    padding: 0px;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+/* Ensure videos maintain aspect ratio and cover the container */
+.video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Keeps the video aspect ratio while covering the container */
+    border-radius: 20px;
+}
+
+/* Vertical video - fill height, center horizontally */
+.v_video {
+    width: 100%; /* Adjust width to auto, so height is prioritized */
+    height: 100%; /* Fill the height */
+    object-fit: cover; /* Cover the container, even if part of the video gets cropped */
+}
+
+/* Horizontal video - fill width, center vertically */
+.h_video {
+    width: 100%; /* Fill the width */
+    height: 100%; /* Adjust height to auto, so width is prioritized */
+    object-fit: cover; /* Cover the container, even if part of the video gets cropped */
+}
+@media screen and (max-width: 1270px) {
+
+    .grid {
+        margin: auto;
+        margin-top: 100px;
+        max-width: 90%;
+        height: calc(4 * 46vw);
+        display: grid;
+        gap: 20px;
+        grid-template-columns: repeat(3, 28vw); /* 4 columns */
+        grid-template-rows: repeat(7, 46vw); /* Auto height based on content */
+        grid-auto-flow: dense; /* Fill the grid with available items */
+    }
+    .item {
+        width: 28vw;
+        height: 46vw;
+    }
+}
+  @media screen and (max-width: 985px) {
+    .grid {
+        margin: auto;
+        margin-top: 100px;
+        height: calc(5 * 66vw);
+        display: grid;
+        gap: 15px;
+        grid-template-columns: repeat(2, 40vw);
+        grid-template-rows: repeat(10, 66vw);
+        grid-auto-flow: dense; /* Fill the grid with available items */
+
+    }
+    .item {
+        width: 40vw;
+        height: 66vw;
+    }
+}
